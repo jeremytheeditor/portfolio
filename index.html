@@ -11,6 +11,15 @@
             box-sizing: border-box;
         }
 
+        html  {
+            scroll-padding-top: 100px;
+        }
+
+        html  {
+            scroll-behavior: smooth;
+            scroll-padding-top: 200px;
+        }
+
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
@@ -31,7 +40,7 @@
             height: 130px;
             border-radius: 50%;
             margin: 0 auto 1.5rem;
-            border: 3px solid rgba(255, 255, 255, 0.1);
+            border: 3px solid rgb(255, 255, 255);
             object-fit: cover;
             background: #3d3d3d;
             display: block;
@@ -135,7 +144,7 @@
         }
 
         .project-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-10px);
             box-shadow: 0 8px 25px rgba(0,0,0,0.12);
         }
 
@@ -197,7 +206,7 @@
         }
 
         .contact-info p {
-            margin-top: 1.5rem;
+            margin-top: 0rem;
             color: #666;
             font-size: 1.05rem;
         }
@@ -258,20 +267,12 @@
     </nav>
 
         <div class="container">
-        <section id="about">
-            <h2>À propos</h2>
-            <div class="about-content">
-                <p>Je suis monteur vidéo depuis 8 ans après avoir suivi une formation de 2 ans en école de cinéma. Mais ça fait bien plus longtemps que je monte des vidéos – peut-être 12 ans je dirais.</p>
-                <p style="margin-top: 1.5rem;">Passionné par la narration visuelle et le rythme, je transforme vos rushes en histoires captivantes.</p>
-            </div>
-        </section>
-
         <section id="projects">
             <h2>Mes Projets</h2>
             <div class="projects-grid">
                 <div class="project-card">
                     <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe src="https://youtu.be/QiQpPRFWeUw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                     <div class="project-info">
                         <h3>Projet 1</h3>
@@ -281,7 +282,7 @@
 
                 <div class="project-card">
                     <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe src="https://youtu.be/BnB66UZdDjU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                     <div class="project-info">
                         <h3>Projet 2</h3>
@@ -291,7 +292,7 @@
 
                 <div class="project-card">
                     <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe src="https://youtu.be/svVQEmUw7aw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                     <div class="project-info">
                         <h3>Projet 3</h3>
@@ -301,7 +302,7 @@
 
                 <div class="project-card">
                     <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe src="https://youtu.be/s6Mvj9moHHU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                     <div class="project-info">
                         <h3>Projet 4</h3>
@@ -311,7 +312,7 @@
 
                 <div class="project-card">
                     <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe src="https://youtu.be/-AybsDYgMuw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                     <div class="project-info">
                         <h3>Projet 5</h3>
@@ -321,7 +322,7 @@
 
                 <div class="project-card">
                     <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe src="https://youtu.be/tTY2JnjfbPY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                     <div class="project-info">
                         <h3>Projet 6</h3>
@@ -331,12 +332,20 @@
             </div>
         </section>
             
+        <section id="about">
+            <h2>À propos</h2>
+            <div class="about-content">
+                <p>Je suis monteur vidéo depuis 8 ans après avoir suivi une formation de 2 ans en école de cinéma. Mais ça fait bien plus longtemps que je monte des vidéos – peut-être 12 ans je dirais.</p>
+                <p style="margin-top: 1.5rem;">Passionné par la narration visuelle et le rythme, je transforme vos rushes en histoires captivantes.</p>
+            </div>
+        </section>
+
         <section id="contact">
             <h2>Contact</h2>
             <div class="contact-content">
                 <div class="contact-info">
                     <p>Intéressé par une collaboration ?</p>
-                    <p style="margin-top: 2rem;">
+                    <p style="margin-top: 1rem;">
                         <a href="mailto:jeremyschmittvideo@gmail.com">jeremyschmittvideo@gmail.com</a>
                     </p>
                     <p style="margin-top: 1rem; font-size: 0.95rem;">N'hésitez pas à me contacter pour discuter de votre projet.</p>
