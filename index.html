@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeremy - Monteur Vidéo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            color: white;
+            padding: 4rem 2rem 3rem;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .profile-photo {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            margin: 0 auto 1.5rem;
+            border: 3px solid rgba(255, 255, 255, 0.1);
+            object-fit: cover;
+            background: #3d3d3d;
+            display: block;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+
+        header p {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        nav {
+            background: white;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+            font-size: 1.05rem;
+        }
+
+        nav a:hover {
+            color: #e74c3c;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        section {
+            margin-bottom: 5rem;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            color: #1a1a1a;
+            font-weight: 300;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: #e74c3c;
+        }
+
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            background: #000;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .project-info {
+            padding: 1.5rem;
+        }
+
+        .project-info h3 {
+            font-size: 1.4rem;
+            margin-bottom: 0.8rem;
+            color: #1a1a1a;
+        }
+
+        .project-info p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .contact-content {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .contact-info {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            margin-top: 2rem;
+        }
+
+        .contact-info a {
+            color: #e74c3c;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+
+        .contact-info a:hover {
+            opacity: 0.8;
+        }
+
+        .contact-info p {
+            margin-top: 1.5rem;
+            color: #666;
+            font-size: 1.05rem;
+        }
+
+        footer {
+            background: #1a1a1a;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+
+        footer p {
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            .profile-photo {
+                width: 110px;
+                height: 110px;
+            }
+
+            header h1 {
+                font-size: 2rem;
+            }
+
+            header p {
+                font-size: 1.1rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            nav ul {
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://via.placeholder.com/130" alt="Photo de Jeremy" class="profile-photo">
+        <h1>Jeremy</h1>
+        <p>Monteur Vidéo</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">À propos</a></li>
+            <li><a href="#projects">Projets</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section id="about">
+            <h2>À propos</h2>
+            <div class="about-content">
+                <p>Je suis monteur vidéo depuis 8 ans après avoir suivi une formation de 2 ans en école de cinéma. Mais ça fait bien plus longtemps que je monte des vidéos – peut-être 12 ans je dirais.</p>
+                <p style="margin-top: 1.5rem;">Passionné par la narration visuelle et le rythme, je transforme vos rushes en histoires captivantes.</p>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Mes Projets</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="project-info">
+                        <h3>Projet 1</h3>
+                        <p>Description de votre premier projet vidéo. Expliquez le contexte, votre rôle et les techniques utilisées.</p>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="project-info">
+                        <h3>Projet 2</h3>
+                        <p>Description de votre deuxième projet vidéo. Mettez en avant les défis relevés et le résultat final.</p>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="project-info">
+                        <h3>Projet 3</h3>
+                        <p>Description de votre troisième projet vidéo. Partagez votre approche créative et les outils utilisés.</p>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="project-info">
+                        <h3>Projet 4</h3>
+                        <p>Description de votre quatrième projet vidéo. Décrivez l'impact du montage sur le message final.</p>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="project-info">
+                        <h3>Projet 5</h3>
+                        <p>Description de votre cinquième projet vidéo. Expliquez ce qui rend ce projet spécial pour vous.</p>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="project-info">
+                        <h3>Projet 6</h3>
+                        <p>Description de votre sixième projet vidéo. Présentez les aspects techniques et artistiques du projet.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <p>Intéressé par une collaboration ?</p>
+                    <p style="margin-top: 2rem;">
+                        <a href="mailto:jeremyschmittvideo@gmail.com">jeremyschmittvideo@gmail.com</a>
+                    </p>
+                    <p style="margin-top: 1rem; font-size: 0.95rem;">N'hésitez pas à me contacter pour discuter de votre projet.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Jeremy - Monteur Vidéo. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>
