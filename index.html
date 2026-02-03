@@ -11,6 +11,10 @@
             box-sizing: border-box;
         }
 
+        body  {
+            overflow-x: hidden;
+        }
+
         html  {
             scroll-padding-top: 100px;
         }
@@ -30,7 +34,7 @@
         header {
             background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
             color: white;
-            padding: 4rem 2rem 3rem;
+            padding: 2rem 1rem 2rem;
             text-align: center;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
@@ -75,7 +79,7 @@
             list-style: none;
             display: flex;
             justify-content: flex-end;
-            gap: 3rem;
+            gap: 2rem;
             flex-wrap: wrap;
             padding-right: 10rem;
         }
@@ -292,6 +296,32 @@
                 gap: 1rem;
             }
         }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                padding: 1rem;
+                gap: 1rem;
+            }
+    
+            .logo {
+                margin-bottom: 0.5rem;
+            }
+    
+            nav ul {
+                justify-content: center;
+                padding-right: 0;
+                gap: 1rem;
+            }
+
+            header {
+                padding: 2rem 1rem;
+            }
+    
+            header h1 {
+                font-size: 1.8rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -302,7 +332,7 @@
     </header> -->
 
     <nav>
-        <a href="#" class="logo">Jeremy - Monteur vidéo</a>
+        <a href="#" class="logo">Jeremy<br>Monteur vidéo</a>
         <ul>
             <li><a href="#projects">Projets</a></li>
             <li><a href="#about">À propos</a></li>
